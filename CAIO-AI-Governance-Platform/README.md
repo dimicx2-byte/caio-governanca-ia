@@ -41,11 +41,15 @@ O CAIO é uma **single‑page application** escrita em HTML, CSS e JavaScript pu
 
 ## Primeiro acesso
 
-A plataforma é entregue **sem dados de demonstração**. No primeiro uso:
+A plataforma é entregue **sem dados de demonstração**, com um **administrador pré‑configurado**:
 
-1. Abra a aplicação e clique em **Criar conta**.
-2. O **primeiro usuário cadastrado torna‑se o administrador** (com plano Premium), podendo gerenciar usuários, cupons e pagamentos.
-3. Os cadastros seguintes entram como usuários comuns no plano Grátis.
+- **Usuário/e‑mail:** `dimicx2@gmail.com`
+- **Senha:** `Dimi@1008`
+- Perfil **Administrador** (Premium), com acesso à gestão de usuários, cupons e pagamentos.
+
+Os cadastros seguintes (via **Criar conta**) entram como usuários comuns no plano Grátis.
+
+> **Segurança:** por ser um protótipo client‑side, essa credencial está embutida no `index.html`. Antes de divulgar a URL publicamente, **troque a senha** em *Minha Conta* e/ou edite o trecho `seedAccounts()` no `index.html`. Para produção real, mova a autenticação para um backend (ver `docs/INTEGRACOES.md`).
 
 > Os dados ficam no navegador (`localStorage`). Limpar os dados do site reinicia a plataforma.
 
