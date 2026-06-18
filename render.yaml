@@ -1,0 +1,19 @@
+# Render Blueprint — CAIO AI Governance Platform (site estático)
+# Publique via: Render Dashboard -> New -> Blueprint -> selecione este repositório.
+# Não há etapa de build: o site é o próprio index.html na raiz.
+services:
+  - type: web
+    name: caio-ai-governance
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+    routes:
+      # SPA de página única: qualquer rota cai no index.html
+      - type: rewrite
+        source: /*
+        destination: /index.html
